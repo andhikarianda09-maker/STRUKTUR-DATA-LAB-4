@@ -8,8 +8,7 @@ struct Node{
 
 int main(){
     system("cls");
-
-    // membuat 10 node data nilai mahasiswa
+    
     Node* node1 = new Node();  node1->data = 100; node1->next = nullptr;
     Node* node2 = new Node();  node2->data = 92;  node2->next = nullptr;
     Node* node3 = new Node();  node3->data = 45;  node3->next = nullptr;
@@ -21,7 +20,6 @@ int main(){
     Node* node9 = new Node();  node9->data = 55;  node9->next = nullptr;
     Node* node10 = new Node(); node10->data = 88; node10->next = nullptr;
 
-    // menghubungkan setiap node
     node1->next = node2;
     node2->next = node3;
     node3->next = node4;
@@ -32,7 +30,6 @@ int main(){
     node8->next = node9;
     node9->next = node10;
 
-    // menentukan head dan tail
     Node* head = node1;
     Node* tail = node10;
 
@@ -44,7 +41,6 @@ int main(){
     }
     cout << endl;
 
-    //  tambahkan 70 di depan 
     Node* nodeBaru1 = new Node();
     nodeBaru1->data = 70;
     nodeBaru1->next = head;
@@ -59,7 +55,6 @@ int main(){
     }
     cout << endl;
 
-    //  tambahkan 50 di belakang 
     Node* nodeBaru2 = new Node();
     nodeBaru2->data = 50;
     nodeBaru2->next = nullptr;
@@ -75,7 +70,6 @@ int main(){
     }
     cout << endl;
 
-    //  tambahkan 0 setelah nilai 45 
     temp = head;
     while (temp->data != 45){
         temp = temp->next;
@@ -95,7 +89,6 @@ int main(){
     }
     cout << endl;
 
-    //  hapus nilai 99 
     temp = head;
     while (temp->next->data != 99){
         temp = temp->next;
@@ -113,7 +106,6 @@ int main(){
     }
     cout << endl;
 
-    //  hapus nilai 60 
     temp = head;
     while (temp->next->data != 60){
         temp = temp->next;
